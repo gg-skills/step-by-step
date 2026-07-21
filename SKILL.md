@@ -341,17 +341,17 @@ Use this template when presenting an active step. Fill in each section with spec
 
 ```bash
 # Initialize a step-by-step session
-npx tsx skills/step-by-step/scripts/init-session.ts --name <session-name> --source <source-plan-or-study>
+npx tsx .agents/skills/step-by-step/scripts/init-session.ts --name <session-name> --source <source-plan-or-study>
 
 # Check step completeness (12-item checklist)
-npx tsx skills/step-by-step/scripts/check-step-completeness.ts --step <step-id>
-npx tsx skills/step-by-step/scripts/check-step-completeness.ts --session <session-dir>
+npx tsx .agents/skills/step-by-step/scripts/check-step-completeness.ts --step <step-id>
+npx tsx .agents/skills/step-by-step/scripts/check-step-completeness.ts --session <session-dir>
 
 # Normalize a step queue from an artifact
-npx tsx skills/step-by-step/scripts/normalize-queue.ts --source <artifact-path>
+npx tsx .agents/skills/step-by-step/scripts/normalize-queue.ts --source <artifact-path>
 
 # Verify step resolution
-npx tsx skills/step-by-step/scripts/verify-step.ts --step <step-id> --evidence <evidence-path>
+npx tsx .agents/skills/step-by-step/scripts/verify-step.ts --step <step-id> --evidence <evidence-path>
 ```
 
 ## Bundled Assets

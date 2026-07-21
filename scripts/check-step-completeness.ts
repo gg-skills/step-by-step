@@ -14,8 +14,8 @@
  * currently resolves only `--session` paths before `checkStep`; align operator docs if that flag is
  * still intended.
  *
- * @testing CLI: npx tsx skills/step-by-step/scripts/check-step-completeness.ts --session .tmp/step-by-step/<session-dir>
- * @testing CLI: npx tsx skills/step-by-step/scripts/check-step-completeness.ts --session latest --json
+ * @testing CLI: npx tsx .agents/skills/step-by-step/scripts/check-step-completeness.ts --session .tmp/step-by-step/<session-dir>
+ * @testing CLI: npx tsx .agents/skills/step-by-step/scripts/check-step-completeness.ts --session latest --json
  *
  * @see skills/step-by-step/SKILL.md - Canonical step-by-step skill surface that tells operators when to run this completeness gate before presenting an active step.
  * @see skills/step-by-step/references/step-presentation-contract.md - Step presentation contract aligned with the checklist rows and heuristics evaluated in this script.
