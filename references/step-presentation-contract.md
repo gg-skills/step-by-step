@@ -47,6 +47,7 @@ Rules:
 - Each option uses a selector token in backticks: `ACTION_NAME_IN_SCREAMING_SNAKE_CASE`.
 - Each option describes what will happen if selected.
 - Accept either the token or a natural-language equivalent.
+- Also invoke the harness Ask User picker in the same turn when that tool is available, mapped per `chooseable-options/references/ask-user-harness.md`.
 
 ### Resolution Check
 
