@@ -125,7 +125,7 @@ A step with any of these must be fixed before presenting:
 2. Present exactly one active step at a time.
 3. Run preflight verifications before each step; never delegate to the user what the agent can verify directly.
 4. Separate agent-executable work from user-only actions in every step packet.
-5. Every active-step packet must follow `references/step-presentation-contract.md` and include chooseable automation, help, and control options.
+5. Every active-step packet must follow `references/step-presentation-contract.md` and include chooseable automation, help, and control options, presented as printed tokens **and** the harness Ask User picker when that tool is available (`chooseable-options/references/ask-user-harness.md`).
 6. Do not mark a step resolved until evidence meets its verification method; if evidence is incomplete, state exactly what is missing and keep the step active.
 7. Initialize a timestamped session folder before the first step, persist state after every status change, and preserve the queue until all steps are resolved, deferred, or blocked.
 
@@ -193,7 +193,7 @@ The current step remains active when the user:
 - Says the step is blocked.
 - Asks to split the step into smaller substeps.
 
-Accept both natural-language replies and explicit selector tokens. If the user reply is ambiguous,
+Accept native picker selection, natural-language replies, and explicit selector tokens. If the user reply is ambiguous,
 do not advance; restate the active step and ask only for the missing clarification.
 
 ## Troubleshooting
@@ -220,6 +220,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - `plan/SKILL.md` — use when a plan contains manual execution, setup, or validation steps that should be guided interactively instead of dumped as a batch.
 - `study/SKILL.md` — use when a completed study hands off a rollout, reproduction, or verification checklist.
 - `decisions/SKILL.md` — use decisions for choosing among alternatives; return here once the direction is chosen and the user needs guided execution.
+- `chooseable-options/SKILL.md` — owns printed-token plus native Ask User presentation for step options.
 - `research-online/SKILL.md` — use when current external docs or product behavior must be checked before the current step can be resolved.
 
 ## Handoff Outputs
