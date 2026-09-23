@@ -342,6 +342,7 @@ Use this template when presenting an active step. Fill in each section with spec
 
 ```bash
 # Initialize a step-by-step session
+# Runner alternatives: bunx tsx / pnpm dlx tsx / deno run -A npm:tsx / node --import tsx / yarn dlx tsx
 npx tsx .agents/skills/step-by-step/scripts/init-session.ts --name <session-name> --source <source-plan-or-study>
 
 # Check step completeness (12-item checklist)
@@ -366,3 +367,5 @@ npx tsx .agents/skills/step-by-step/scripts/verify-step.ts --step <step-id> --ev
 
 Guidance alignment: apply repository guidance consistently with `AGENTS.md`. If this skill file is
 updated, run `npm run skills:sync` so IDEs pick up the new version immediately.
+
+[^rt]: `npx tsx` accepts any standard runner — `bunx tsx`, `pnpm dlx tsx`, `deno run -A npm:tsx`, `node --import tsx`, or `yarn dlx tsx`. The first five auto-fetch `tsx` on demand; only `node --import tsx` requires `tsx` to be installed locally first (`npm i -D tsx`, or `npm i -g tsx` if you cannot reach the npm registry). Bun users can also skip `tsx` entirely and run TypeScript directly via `bun <script>`. Pick whichever your project ships. The canonical runtime decision table lives in the `skills-manager` skill under `Runtime Selection` (only available when working in the full `gg-skills` monorepo).
