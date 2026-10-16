@@ -170,7 +170,7 @@ reordering; if that happens, explain the reason before continuing.
 2. Initialize the timestamped `.tmp/` session folder and persist the initial queue snapshot.
 3. Identify the next unresolved step.
 4. Run preflight checks and gather local evidence before prompting the user.
-5. Present the active-step packet using `references/step-presentation-contract.md`.
+5. Present the active-step packet using `references/step-presentation-contract.md`. Include `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when that contract says so.
 6. Persist the active-step packet and current session state.
 7. If the user chooses an automation option, execute the safe agent-side work first.
 8. Wait for user evidence, confirmation, or follow-up questions.
@@ -222,6 +222,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - `decisions/SKILL.md` — use decisions for choosing among alternatives; return here once the direction is chosen and the user needs guided execution.
 - `chooseable-options/SKILL.md` — owns printed-token plus native Ask User presentation for step options.
 - `research-online/SKILL.md` — use when current external docs or product behavior must be checked before the current step can be resolved.
+- `improve-instrumentation/SKILL.md` — offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when `references/step-presentation-contract.md` says so. Picking it does not resolve the step.
 
 ## Handoff Outputs
 
@@ -240,6 +241,17 @@ do not advance; restate the active step and ask only for the missing clarificati
 - Completed vs remaining steps.
 - Validation evidence produced during the interactive loop.
 - Any steps that should be re-added to the plan as blockers or follow-ups.
+
+### To `improve-instrumentation/SKILL.md`
+
+Only after the operator picks `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION`:
+
+- `STEP_ID`
+- Session directory
+- The behavior the step verifies
+- The question a run must answer
+
+The step stays active until evidence returns. This handoff does not resolve the step.
 
 ### To downstream task tracking when explicitly requested
 
@@ -317,6 +329,8 @@ Use this template when presenting an active step. Fill in each section with spec
 ## Next Step
 **Following:** [Next STEP_ID or "Queue exhausted"]
 ```
+
+`STEP_[ID]_AUTOMATE_IMPROVE_INSTRUMENTATION` is not part of every packet. Include it only when `references/step-presentation-contract.md` says the verification is a project behavior and preflight found no command and no page.
 
 ### Step Normalization Template
 

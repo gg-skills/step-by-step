@@ -154,3 +154,4 @@ step-by-step/
 - Session state is local to the working directory. Moving the repo or switching worktrees requires copying the `.tmp/step-by-step/` tree manually.
 - Substep splits renumber the queue; if an upstream plan or task tracker is synced, the agent reports the renumbering but does not automatically update external IDs.
 - Cross-skill handoffs to `plan`, `study`, or `decisions` include the session path and queue snapshot, but those skills must be installed separately.
+- When a step verifies a project behavior and preflight found no command and no page, `AUTOMATION_OPTIONS` can offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION`. The condition is in [references/step-presentation-contract.md](references/step-presentation-contract.md). Picking it does not resolve the step.
