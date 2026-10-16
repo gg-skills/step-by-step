@@ -222,7 +222,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - `decisions/SKILL.md` — use decisions for choosing among alternatives; return here once the direction is chosen and the user needs guided execution.
 - `chooseable-options/SKILL.md` — owns printed-token plus native Ask User presentation for step options.
 - `research-online/SKILL.md` — use when current external docs or product behavior must be checked before the current step can be resolved.
-- `improve-instrumentation/SKILL.md` — offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when `references/step-presentation-contract.md` says so. Picking it does not resolve the step.
+- `instrumentation/SKILL.md` — offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when `references/step-presentation-contract.md` says so. Picking it does not resolve the step.
 
 ## Handoff Outputs
 
@@ -242,7 +242,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - Validation evidence produced during the interactive loop.
 - Any steps that should be re-added to the plan as blockers or follow-ups.
 
-### To `improve-instrumentation/SKILL.md`
+### To `instrumentation/SKILL.md`
 
 Only after the operator picks `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION`:
 

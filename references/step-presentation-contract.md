@@ -48,7 +48,7 @@ Rules:
 - Each option describes what will happen if selected.
 - Accept either the token or a natural-language equivalent.
 - Also invoke the harness Ask User picker in the same turn when that tool is available, mapped per `chooseable-options/references/ask-user-harness.md`.
-- When the verification method is a project behavior and preflight found no command and no page, add `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` to `AUTOMATION_OPTIONS`. It hands off to `improve-instrumentation/SKILL.md` to add a command and a human view, then returns evidence to this step. Omit it when a command or a page already answers the step, or when the step is a click in someone else's console. Do not put it in `HELP_OPTIONS` or `CONTROL_OPTIONS`. Selecting it does not resolve the step. Pasted output, a screenshot, or explicit proof still can.
+- When the verification method is a project behavior and preflight found no command and no page, add `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` to `AUTOMATION_OPTIONS`. It hands off to `instrumentation/SKILL.md` to add a command and a human view, then returns evidence to this step. Omit it when a command or a page already answers the step, or when the step is a click in someone else's console. Do not put it in `HELP_OPTIONS` or `CONTROL_OPTIONS`. Selecting it does not resolve the step. Pasted output, a screenshot, or explicit proof still can.
 
 ### Resolution Check
 
