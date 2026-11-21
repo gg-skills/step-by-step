@@ -24,7 +24,7 @@ mkdir -p ~/.claude/skills
 git -C ~/.claude/skills clone git@github.com:gg-skills/step-by-step.git
 ```
 
-Restart your agent or reload skills after installation. See the parent [`skills` catalog repo](https://github.com/gg-skills/skills) for the full catalog.
+Restart your agent or reload skills after installation. Browse public skills on the [GG Skills organization profile](https://github.com/gg-skills).
 
 ## When to use
 
@@ -146,7 +146,7 @@ step-by-step/
 - [SKILL.md](SKILL.md) — full trigger guide, non-negotiable policy, cross-skill coordination, and handoff output spec.
 - [references/session-artifact-contract.md](references/session-artifact-contract.md) — session folder layout, required files, persistence timing, and resume rules.
 - [references/step-presentation-contract.md](references/step-presentation-contract.md) — active-step packet structure, chooseable option groups, and resolution-check rules.
-- [gg-skills](https://github.com/gg-skills/skills) — parent skill library.
+- [GG Skills](https://github.com/gg-skills) — public skill library.
 
 ## Caveats
 

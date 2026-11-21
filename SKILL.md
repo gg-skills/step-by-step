@@ -222,7 +222,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - `decisions/SKILL.md` — use decisions for choosing among alternatives; return here once the direction is chosen and the user needs guided execution.
 - `chooseable-options/SKILL.md` — owns printed-token plus native Ask User presentation for step options.
 - `research-online/SKILL.md` — use when current external docs or product behavior must be checked before the current step can be resolved.
-- `instrumentation/SKILL.md` — offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when `references/step-presentation-contract.md` says so. Picking it does not resolve the step.
+- the project’s instrumentation workflow — offer `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION` only when `references/step-presentation-contract.md` says so. Picking it does not resolve the step.
 
 ## Handoff Outputs
 
@@ -242,7 +242,7 @@ do not advance; restate the active step and ask only for the missing clarificati
 - Validation evidence produced during the interactive loop.
 - Any steps that should be re-added to the plan as blockers or follow-ups.
 
-### To `instrumentation/SKILL.md`
+### To the project’s instrumentation workflow
 
 Only after the operator picks `STEP_<ID>_AUTOMATE_IMPROVE_INSTRUMENTATION`:
 
@@ -382,4 +382,4 @@ npx tsx .agents/skills/step-by-step/scripts/verify-step.ts --step <step-id> --ev
 Guidance alignment: apply repository guidance consistently with `AGENTS.md`. If this skill file is
 updated, run `npm run skills:sync` so IDEs pick up the new version immediately.
 
-[^rt]: `npx tsx` accepts any standard runner — `bunx tsx`, `pnpm dlx tsx`, `deno run -A npm:tsx`, `node --import tsx`, or `yarn dlx tsx`. The first five auto-fetch `tsx` on demand; only `node --import tsx` requires `tsx` to be installed locally first (`npm i -D tsx`, or `npm i -g tsx` if you cannot reach the npm registry). Bun users can also skip `tsx` entirely and run TypeScript directly via `bun <script>`. Pick whichever your project ships. The canonical runtime decision table lives in the `skills-manager` skill under `Runtime Selection` (only available when working in the full `gg-skills` monorepo).
+[^rt]: `npx tsx` accepts any standard runner — `bunx tsx`, `pnpm dlx tsx`, `deno run -A npm:tsx`, `node --import tsx`, or `yarn dlx tsx`. The first five auto-fetch `tsx` on demand; only `node --import tsx` requires `tsx` to be installed locally first (`npm i -D tsx`, or `npm i -g tsx` if you cannot reach the npm registry). Bun users can also skip `tsx` entirely and run TypeScript directly via `bun <script>`. Pick whichever your project ships.
