@@ -1,0 +1,1 @@
+Three ascending steps with a checkpoint represent progressing through a workflow one confirmed action at a time.

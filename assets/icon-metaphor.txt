@@ -1,0 +1,1 @@
+A stairway with a checkpoint on each tread represents advancing one confirmed step at a time.
