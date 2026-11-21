@@ -1,10 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Skill icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 64 64" fill="none" role="img" aria-label="GG → Step by Step → Workflow">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4f46e5"/>
-      <stop offset="1" stop-color="#9333ea"/>
+    <linearGradient id="step-by-step-background" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#0E172A"/>
+      <stop offset="1" stop-color="#09101D"/>
     </linearGradient>
+    <radialGradient id="step-by-step-glow" cx="45" cy="17" r="53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22C55E" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="160" height="160" rx="35" fill="url(#g)"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="54" font-weight="800" fill="#ffffff">AW</text>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#step-by-step-background)"/>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#step-by-step-glow)"/>
+  <path d="M15 48v-5h11v-8h11v-8h12v21Z" fill="#133D32" stroke="#F8FAFC" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="20.5" cy="36.5" r="2.4" fill="#86EFAC"/>
+  <circle cx="31.5" cy="28.5" r="2.4" fill="#86EFAC"/>
+  <circle cx="43" cy="17.5" r="5.4" fill="#86EFAC"/>
+  <path d="m40.5 17.5 1.75 1.75 3.25-3.5" stroke="#14532D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
